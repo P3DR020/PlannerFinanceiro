@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const { getTrendAnalysis, getCategoryDistribution, getSpendingPatterns, getPeriodComparison } = require('../controllers/reportController');
+const { protect } = require('../middleware/auth');
+router.use(protect);
+router.get('/trend-analysis', getTrendAnalysis);
+router.get('/category-distribution', getCategoryDistribution);
+router.get('/spending-patterns', getSpendingPatterns);
+router.get('/period-comparison', getPeriodComparison);
+module.exports = router;
