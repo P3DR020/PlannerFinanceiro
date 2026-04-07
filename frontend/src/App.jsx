@@ -3,11 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import useAuthStore from './store/authStore';
 import AppLayout from './components/layout/AppLayout';
 import LoginPage from './pages/LoginPage';
-import DashboardPage from './pages/DashboardPage';
-import TransactionsPage from './pages/TransactionsPage';
-import BudgetsPage from './pages/BudgetsPage';
-import SavingsPage from './pages/SavingsPage';
-import ReportsPage from './pages/ReportsPage';
+
+
 
 function PrivateRoute({ children }) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
